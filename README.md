@@ -22,7 +22,5 @@ Aprender os conceitos básicos de desenvolvimento web com **Spring Boot** e **Th
 - Dados armazenados em **memória** dentro do Controller (sem banco de dados)
 - Interface simples feita com **HTML + CSS + JavaScript**
 
----
 
-## 🗂️ Estrutura do Projeto
 
