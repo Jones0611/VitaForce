@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>VitaForce - Suplementos Premium</title>
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="header">
+    <div class="container">
+        <h1 class="logo">VitaForce</h1>
+        <p class="tagline">Potencialize seu desempenho com suplementos de alta qualidade</p>
+    </div>
+</header>
+
+<section class="produtos container">
+    <div th:each="produto : ${produtos}" class="card">
+        <div class="card-icon">⚡</div>
+        <div class="card-content">
+            <h2 th:text="${produto.nome}"></h2>
+            <p th:text="${produto.descricao}"></p>
+            <div class="card-footer">
+                <strong class="preco" th:text="${produto.preco}"></strong>
+                <a th:href="@{'/produto/' + ${produto.id}}" class="btn">Ver detalhes</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <p>&copy; 2025 João Vitor Rodrigues. VitaForce, Energia que transforma.</p>
+    </div>
+</footer>
+
+<script src="/script.js"></script>
+</body>
+</html>
